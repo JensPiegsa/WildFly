@@ -1,4 +1,4 @@
-FROM sillenttroll / wildfly-java-8
+FROM sillenttroll/wildfly-java-8
 
 MAINTAINER Jens Piegsa <piegsa@gmail.com>
 
