@@ -5,7 +5,7 @@ Usage example
 -------------
 
 ```sh
-docker run -name wf -d -P piegsaj/wildfly
+docker run -name wf -d -P -e WILDFLY_PASS="another_password" piegsaj/wildfly
 ```
 
 Source
