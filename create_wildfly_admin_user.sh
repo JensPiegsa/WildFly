@@ -13,7 +13,7 @@ echo "=> Creating the WildFly user 'admin' with the ${_type} password '${PASS}'.
 echo "=> Done!"
 touch /.wildfly_admin_created
 echo "========================================================================"
-echo "You can now configure to this WildFly server using:"
+echo "You can now configure this WildFly server using:"
 echo ""
 echo " admin:${PASS}"
 echo ""
