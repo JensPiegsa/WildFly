@@ -4,7 +4,9 @@ WildFly
 Usage example
 -------------
 
+```sh
 docker run -name wf -d -P piegsaj/wildfly
+```
 
 Source
 ------
