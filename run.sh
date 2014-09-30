@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ ! -f /.wildfly_admin_created ]; then
+if [ ! -f /opt/.wildfly_admin_created ]; then
   /create_wildfly_admin_user.sh
 fi
 
