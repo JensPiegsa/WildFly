@@ -1,19 +1,32 @@
 WildFly
 =======
 
-Usage example
+Install Docker
+--------------
+
+Follow the [installation instruction](http://docs.docker.com/installation/) for your host system.
+
+Run the image
 -------------
 
 ```sh
 docker run --name="wf" -d -p 8080:8080 -p 9990:9990 -e WILDFLY_PASS="a_password" piegsaj/wildfly
 ```
 
-Source
-------
+Access WildFly
+--------------
 
-The source is available on [GitHub](https://github.com/JensPiegsa/WildFly/).
+```
+http://host-ip:8080/
+```
 
-Issues
-------
+and
 
-Please report any issues on [GitHub](https://github.com/JensPiegsa/WildFly/issues).
+```
+http://host-ip:9990/
+```
+
+Contribute
+----------
+
+The source is available on [Github](https://github.com/JensPiegsa/WildFly/). Please report any issues  [here](https://github.com/JensPiegsa/WildFly/issues).
