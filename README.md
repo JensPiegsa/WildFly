@@ -16,7 +16,7 @@ docker run --name="wf" -d -p 8080:8080 -p 9990:9990 -e WILDFLY_PASS="a_password"
 Access WildFly
 --------------
 
-via `http://host-ip:8080/` and `http://host-ip:9990/`:
+via `http://host-ip:8080/` and `http://host-ip:9990/`
 
 Contribute
 ----------
