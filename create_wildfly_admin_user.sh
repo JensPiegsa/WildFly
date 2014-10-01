@@ -12,9 +12,10 @@ echo "=> Creating the WildFly user 'admin' with the ${_type} password '${PASS}'.
 /opt/wildfly/bin/add-user.sh admin ${PASS} --silent
 echo "=> Done!"
 touch /opt/.wildfly_admin_created
-echo "========================================================================"
-echo "You can now configure this WildFly server using:"
+echo "========================================================================="
 echo ""
-echo " admin:${PASS}"
+echo "You can now configure this WildFly server using:}"
 echo ""
-echo "========================================================================"
+echo "    admin:${PASS}"
+echo ""
+echo "========================================================================="
