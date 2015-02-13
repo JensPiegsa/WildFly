@@ -7,7 +7,7 @@ Features
 * runs in standalone mode
 * binds to all interfaces
 * creates an *admin* user on first usage
-* installation path: **/opt/wildfly**
+* installation path: /opt/wildfly
 * linux user: wildfly
 
 1. Install Docker
