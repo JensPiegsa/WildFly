@@ -19,15 +19,9 @@ Follow the [installation instructions](http://docs.docker.com/installation/) for
 ----------------
 
 ```sh
-sudo docker run --name="wf" -d -p 8080:8080 -p 9990:9990 -e WILDFLY_PASS="a_password" piegsaj/wildfly
-```
-
-or e.g.:
-
-```sh
 mkdir /opt/wildfly-deployments
 chmod 777 /opt/wildfly-deployments
-sudo docker run --name="wf" -d -p 8080:8080 -p 9990:9990 -e WILDFLY_PASS="a_password" -v /opt/wildfly-deployments:/opt/wildfly/standalone/deployments/ piegsaj/wildfly
+sudo docker run --name="wf" -d -p 8080:8080 -p 9990:9990 -e WILDFLY_PASS="a_password" -v /opt/wildfly-deployments:/opt/wildfly/standalone/deployments/:rw piegsaj/wildfly
 ```
 
 3. Access WildFly
