@@ -5,7 +5,7 @@ RUN apt-get update && \
     apt-get install software-properties-common python-software-properties -y && \
     add-apt-repository ppa:webupd8team/java && \
     apt-get update
-RUN echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
+RUN echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections
 RUN apt-get install oracle-java8-set-default oracle-java8-installer -y && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
@@ -31,7 +31,7 @@ RUN chown -R wildfly:wildfly /opt/wildfly*
 
 ADD create_wildfly_admin_user.sh /create_wildfly_admin_user.sh
 ADD run.sh /run.sh
-RUN sudo chmod +x /*.sh
+RUN chmod +x /*.sh
 
 # Expose the ports we're interested in
 EXPOSE 8080 9990
