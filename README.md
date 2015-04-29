@@ -6,8 +6,8 @@ This is a Docker image for the Java application server [WildFly](http://wildfly.
 Tags
 ----
 
-* 8.2
-* 9.0.0.Beta2, latest
+* `8.2`, `latest-final`
+* `9.0.0.Beta2`, `latest`
 
 Features
 --------
@@ -49,6 +49,7 @@ Administration
 * follow  the server log: `docker logs wf`
 * stop and remove the Docker container: `docker stop wf && docker rm wf`
 * access the shell: `docker exec -it wf /bin/bash`
+* access CLI: `docker exec -it wf /opt/wildfly/bin/jboss-cli.sh -c -u=admin -p=a_password`
 
 Contribute
 ----------
