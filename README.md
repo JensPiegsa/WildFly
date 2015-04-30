@@ -1,13 +1,13 @@
-WildFly 8 / 9 on Java 8
-=======================
+WildFly 9.0.0.Beta2 and 8.2 on Java 8
+=====================================
 
 This is a Docker image for the Java application server [WildFly](http://wildfly.org/). The image is based on Ubuntu 15.04 and comes with Java 8. The Dockerfile for this image has been inspired by [sillenttroll's image](https://registry.hub.docker.com/u/sillenttroll/wildfly-java-8/).
 
 Tags
 ----
 
-* `8.2`, `latest-final`
-* `9.0.0.Beta2`, `latest`
+* `8.2` ([Dockerfile](https://github.com/JensPiegsa/WildFly/blob/8.2.0.Final/Dockerfile)), `latest-final`
+* `9.0.0.Beta2` ([Dockerfile](https://github.com/JensPiegsa/WildFly/blob/9.0.0.Beta2/Dockerfile)), `latest`
 
 Features
 --------
