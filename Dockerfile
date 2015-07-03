@@ -1,17 +1,20 @@
 FROM ubuntu:15.10
+
 MAINTAINER Jens Piegsa <piegsa@gmail.com>
 
 RUN apt-get update && \
     apt-get install software-properties-common python-software-properties -y && \
     add-apt-repository ppa:webupd8team/java && \
     apt-get update
+
 RUN echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections
+
 RUN apt-get install oracle-java8-set-default oracle-java8-installer -y && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
     
 # Set the WILDFLY_VERSION env variable
-ENV WILDFLY_VERSION 9.0.0.CR2
+ENV WILDFLY_VERSION 9.0.0.Final
 
 # Add the WildFly distribution to /opt
 RUN cd /opt && wget http://download.jboss.org/wildfly/$WILDFLY_VERSION/wildfly-$WILDFLY_VERSION.tar.gz 
