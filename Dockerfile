@@ -14,7 +14,7 @@ RUN apt-get install oracle-java8-set-default oracle-java8-installer -y && \
     rm -rf /var/lib/apt/lists/*
     
 # Set the WILDFLY_VERSION env variable
-ENV WILDFLY_VERSION 9.0.0.Final
+ENV WILDFLY_VERSION 9.0.1.Final
 
 # Add the WildFly distribution to /opt
 RUN cd /opt && wget http://download.jboss.org/wildfly/$WILDFLY_VERSION/wildfly-$WILDFLY_VERSION.tar.gz 
