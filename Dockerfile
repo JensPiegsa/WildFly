@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y $BUILD_PACKAGES --no-install-recommends
     groupadd -r wildfly -g 433 && \
     useradd -u 431 -r -g wildfly -d $JBOSS_HOME -s /bin/false -c "WildFly user" wildfly && \
     chmod +x /create_wildfly_admin_user.sh /run.sh && \
-    chown -R wildfly:wildfly $JBOSS_HOME
+    chown -R wildfly:wildfly /opt/wildfly*
 
 EXPOSE 8080 9990
 
