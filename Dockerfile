@@ -1,4 +1,4 @@
-FROM piegsaj/oracle-jre:latest
+FROM piegsaj/oracle-jre:1.8.0_66-b17
 
 MAINTAINER Jens Piegsa <piegsa@gmail.com>
 
