@@ -1,4 +1,4 @@
-WildFly 10.0.0.CR4 and 9.0.1.Final on Java 8
+WildFly 10.0.0.CR5 and 9.0.1.Final on Java 8
 ============================================
 
 This is a Docker image for the Java application server [WildFly](http://wildfly.org/). The image is based on Ubuntu 15.10 and comes with Java 8. The Dockerfile has been inspired by [this image](https://registry.hub.docker.com/u/sillenttroll/wildfly-java-8/).
@@ -6,7 +6,8 @@ This is a Docker image for the Java application server [WildFly](http://wildfly.
 Tags
 ----
 
-* `10.0.0.CR4` ([Dockerfile](https://github.com/JensPiegsa/WildFly/blob/10.0.0.CR4/Dockerfile)), `latest`
+* `10.0.0.CR5` ([Dockerfile](https://github.com/JensPiegsa/WildFly/blob/10.0.0.CR5/Dockerfile)), `latest`
+* `10.0.0.CR4` ([Dockerfile](https://github.com/JensPiegsa/WildFly/blob/10.0.0.CR4/Dockerfile))
 * `10.0.0.CR2` ([Dockerfile](https://github.com/JensPiegsa/WildFly/blob/10.0.0.CR2/Dockerfile))
 * `10.0.0.CR1` ([Dockerfile](https://github.com/JensPiegsa/WildFly/blob/10.0.0.CR1/Dockerfile))
 * `10.0.0.Beta2` ([Dockerfile](https://github.com/JensPiegsa/WildFly/blob/10.0.0.Beta2/Dockerfile)),
