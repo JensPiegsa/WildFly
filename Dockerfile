@@ -2,7 +2,7 @@ FROM piegsaj/oracle-jre:1.8.0_66-b17
 
 MAINTAINER Jens Piegsa <piegsa@gmail.com>
 
-ENV WILDFLY_VERSION 10.0.0.CR4
+ENV WILDFLY_VERSION 10.0.0.CR5
 ENV JBOSS_HOME      /opt/wildfly
 ENV BUILD_PACKAGES  curl
 
