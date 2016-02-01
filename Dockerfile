@@ -1,8 +1,8 @@
-FROM piegsaj/oracle-jre:1.8.0_66-b17
+FROM piegsaj/oracle-jre:1.8.0_72-b15
 
 MAINTAINER Jens Piegsa <piegsa@gmail.com>
 
-ENV WILDFLY_VERSION 10.0.0.CR5
+ENV WILDFLY_VERSION 10.0.0.Final
 ENV JBOSS_HOME      /opt/wildfly
 ENV BUILD_PACKAGES  curl
 
