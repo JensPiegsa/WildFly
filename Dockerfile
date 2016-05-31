@@ -5,7 +5,7 @@ MAINTAINER Jens Piegsa <piegsa@gmail.com>
 ENV WILDFLY_VERSION 10.0.0.Final
 ENV JBOSS_HOME      /opt/wildfly
 ENV BUILD_PACKAGES  curl
-ENV RUNTIM_PACKAGES pwgen
+ENV RUNTIME_PACKAGES pwgen
 
 ADD run.sh /
 ADD create_wildfly_admin_user.sh /
