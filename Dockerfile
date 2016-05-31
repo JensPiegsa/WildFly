@@ -10,7 +10,7 @@ ENV RUNTIM_PACKAGES pwgen
 ADD run.sh /
 ADD create_wildfly_admin_user.sh /
        
-RUN apt-get update && apt-get install -y $RUNTIM_PACKAGES $BUILD_PACKAGES --no-install-recommends && apt-get clean -qq && \
+RUN apt-get update && apt-get install -y $RUNTIME_PACKAGES $BUILD_PACKAGES --no-install-recommends && apt-get clean -qq && \
     curl -Ls "http://download.jboss.org/wildfly/$WILDFLY_VERSION/wildfly-$WILDFLY_VERSION.tar.gz" \
     | tar -xzC /opt --no-same-owner && \
     apt-get remove -qq --purge -y $BUILD_PACKAGES $(apt-mark showauto) && rm -rf /var/lib/apt/lists/* && \
