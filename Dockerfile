@@ -1,10 +1,10 @@
-FROM piegsaj/oracle-jre:1.8.0_72-b15
+FROM piegsaj/oracle-jre:1.8.0_102-b14
 
 MAINTAINER Jens Piegsa <piegsa@gmail.com>
 
-ENV WILDFLY_VERSION 10.0.0.Final
-ENV JBOSS_HOME      /opt/wildfly
-ENV BUILD_PACKAGES  curl
+ENV WILDFLY_VERSION  10.1.0.CR1
+ENV JBOSS_HOME       /opt/wildfly
+ENV BUILD_PACKAGES   curl
 ENV RUNTIME_PACKAGES pwgen
 
 ADD run.sh /
@@ -21,7 +21,7 @@ RUN apt-get update && apt-get install -y $RUNTIME_PACKAGES $BUILD_PACKAGES --no-
     chmod +x /create_wildfly_admin_user.sh /run.sh && \
     chown -R wildfly:wildfly /opt/wildfly*
 
-EXPOSE 8080 9990
+EXPOSE 8080 9990 8443 9993
 
 USER wildfly
 
