@@ -18,6 +18,7 @@ RUN apt-get update && apt-get install -y $RUNTIME_PACKAGES $BUILD_PACKAGES --no-
     ln -s /opt/wildfly-$WILDFLY_VERSION $JBOSS_HOME && \
     groupadd -r wildfly -g 433 && \
     useradd -u 431 -r -g wildfly -d $JBOSS_HOME -s /bin/false -c "WildFly user" wildfly && \
+    chown wildfly:wildfly $JAVA_HOME/jre/lib/security/cacerts && \
     chmod +x /create_wildfly_admin_user.sh /run.sh && \
     chown -R wildfly:wildfly /opt/wildfly*
 
