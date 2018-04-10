@@ -40,7 +40,7 @@ Follow the [installation instructions](http://docs.docker.com/installation/) for
 ----------------
 
 ```sh
-docker run --name="wf" -d -p 8080:8080 -p 9990:9990 -e WILDFLY_PASS="a_password" piegsaj/wildfly
+docker container run --name="wf" -d -p 8080:8080 -p 9990:9990 -e WILDFLY_PASS="a_password" piegsaj/wildfly
 ```
 
 or
@@ -48,7 +48,7 @@ or
 ```sh
 mkdir /opt/wildfly-deployments
 chmod 777 /opt/wildfly-deployments
-sudo docker run --name="wf" -d -p 8080:8080 -p 9990:9990 -e WILDFLY_PASS="a_password" -v /opt/wildfly-deployments:/opt/wildfly/standalone/deployments/:rw piegsaj/wildfly
+sudo docker container run --name="wf" -d -p 8080:8080 -p 9990:9990 -e WILDFLY_PASS="a_password" -v /opt/wildfly-deployments:/opt/wildfly/standalone/deployments/:rw piegsaj/wildfly
 ```
 
 3. Access WildFly
@@ -60,9 +60,10 @@ Administration
 --------------
 
 * follow  the server log: `docker logs -f wf`
-* stop and remove the Docker container: `docker stop wf && docker rm wf`
-* access the shell: `docker exec -it wf /bin/bash`
-* access CLI: `docker exec -it wf /opt/wildfly/bin/jboss-cli.sh -c -u=admin -p=a_password`
+* stop and remove the Docker container: `docker container stop wf && docker container rm wf`
+* access the shell: `docker container exec -it wf /bin/bash`
+* access CLI: `docker container exec -it wf /opt/wildfly/bin/jboss-cli.sh -c -u=admin -p=a_password`
+* run once in `--admin-only` mode: `docker container exec wf touch /opt/wildfly/ADMIN_ONLY_MODE && docker container restart wf`
 
 Contribute
 ----------
