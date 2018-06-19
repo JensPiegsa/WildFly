@@ -9,4 +9,4 @@ if  [ -f /opt/wildfly/ADMIN_ONLY_MODE ]; then
   rm /opt/wildfly/ADMIN_ONLY_MODE
 fi
 
-exec /opt/wildfly/bin/standalone.sh -b=0.0.0.0 -bmanagement=0.0.0.0 $ADMIN_ONLY_MODE_FLAG
+exec /opt/wildfly/bin/standalone.sh -Dee8.preview.mode=true -b=0.0.0.0 -bmanagement=0.0.0.0 $ADMIN_ONLY_MODE_FLAG
