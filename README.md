@@ -1,12 +1,13 @@
-WildFly 10.1.0.Final on Java 8
-==============================
+WildFly 14.0.0.Final on Java 8
+===============================
 
 This is a Docker image for the Java application server [WildFly](http://wildfly.org/). The image is based on Ubuntu 16.04 LTS and comes with Java 8. The Dockerfile has been inspired by [this image](https://registry.hub.docker.com/u/sillenttroll/wildfly-java-8/).
 
 Tags
 ----
 
-* `13.0.0.Final` ([Dockerfile](https://github.com/JensPiegsa/WildFly/blob/13.0.0.Final/Dockerfile)), `latest-final`, `latest`
+* `14.0.0.Final` ([Dockerfile](https://github.com/JensPiegsa/WildFly/blob/14.0.0.Final/Dockerfile)), `latest-final`, `latest`
+* `13.0.0.Final` ([Dockerfile](https://github.com/JensPiegsa/WildFly/blob/13.0.0.Final/Dockerfile))
 * `10.1.0.Final` ([Dockerfile](https://github.com/JensPiegsa/WildFly/blob/10.1.0.Final/Dockerfile))
 * `10.1.0.CR1` ([Dockerfile](https://github.com/JensPiegsa/WildFly/blob/10.1.0.CR1/Dockerfile))
 * `10.0.0.Final` ([Dockerfile](https://github.com/JensPiegsa/WildFly/blob/10.0.0.Final/Dockerfile))
