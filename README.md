@@ -6,7 +6,8 @@ This is a Docker image for the Java application server [WildFly](http://wildfly.
 Tags
 ----
 
-* `14.0.0.Final` ([Dockerfile](https://github.com/JensPiegsa/WildFly/blob/14.0.0.Final/Dockerfile)), `latest-final`, `latest`
+* `14.0.1.Final` ([Dockerfile](https://github.com/JensPiegsa/WildFly/blob/14.0.1.Final/Dockerfile)), `latest-final`, `latest`
+* `14.0.0.Final` ([Dockerfile](https://github.com/JensPiegsa/WildFly/blob/14.0.0.Final/Dockerfile))
 * `13.0.0.Final` ([Dockerfile](https://github.com/JensPiegsa/WildFly/blob/13.0.0.Final/Dockerfile))
 * `10.1.0.Final` ([Dockerfile](https://github.com/JensPiegsa/WildFly/blob/10.1.0.Final/Dockerfile))
 * `10.1.0.CR1` ([Dockerfile](https://github.com/JensPiegsa/WildFly/blob/10.1.0.CR1/Dockerfile))
