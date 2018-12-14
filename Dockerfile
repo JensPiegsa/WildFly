@@ -9,12 +9,11 @@ ENV RUNTIME_PACKAGES pwgen
 ADD run.sh /
 ADD create_wildfly_admin_user.sh /
 
-RUN curl -sSf "https://download.jboss.org/wildfly/$WILDFLY_VERSION/wildfly-$WILDFLY_VERSION.tar.gz" > /dev/null
-
 RUN apt-get update && apt-get install -y $RUNTIME_PACKAGES --no-install-recommends && apt-get clean -qq && \
     curl -Ls "https://download.jboss.org/wildfly/$WILDFLY_VERSION/wildfly-$WILDFLY_VERSION.tar.gz" \
-    | tar -xzC /opt --no-same-owner && \
-    apt-get remove -qq --purge -y $BUILD_PACKAGES $(apt-mark showauto) && rm -rf /var/lib/apt/lists/*
+    | tar -xzC /opt --no-same-owner
+RUN apt-get remove -qq --purge -y $BUILD_PACKAGES $(apt-mark showauto)
+RUN rm -rf /var/lib/apt/lists/*
 
 RUN ln -s /opt/wildfly-$WILDFLY_VERSION $JBOSS_HOME && \
     groupadd -r wildfly -g 433 && \
