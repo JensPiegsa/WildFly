@@ -12,7 +12,7 @@ ADD create_wildfly_admin_user.sh /
 RUN apt-get update && apt-get install -y $RUNTIME_PACKAGES --no-install-recommends && apt-get clean -qq && \
     curl -Ls "https://download.jboss.org/wildfly/$WILDFLY_VERSION/wildfly-$WILDFLY_VERSION.tar.gz" \
     | tar -xzC /opt --no-same-owner
-RUN apt-get remove -qq --purge -y $(apt-mark showauto)
+
 RUN rm -rf /var/lib/apt/lists/*
 
 RUN ln -s /opt/wildfly-$WILDFLY_VERSION $JBOSS_HOME && \
