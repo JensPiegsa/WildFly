@@ -2,7 +2,7 @@ FROM openjdk:11-jre
 
 MAINTAINER Jens Piegsa <piegsa@gmail.com>
 
-ENV WILDFLY_VERSION  15.0.0.Final
+ENV WILDFLY_VERSION  20.0.1.Final
 ENV JBOSS_HOME       /opt/wildfly
 ENV RUNTIME_PACKAGES pwgen
 
