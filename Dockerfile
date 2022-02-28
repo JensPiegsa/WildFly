@@ -1,27 +1,42 @@
-FROM openjdk:11-jre
+FROM openjdk:17
 
 MAINTAINER Jens Piegsa <piegsa@gmail.com>
 
-ENV WILDFLY_VERSION  20.0.1.Final
+ENV WILDFLY_VERSION  26.0.1.Final
+ENV WILDFLY_SHA1     08908faf9ae99e5fb6374979afbffea461aadc2c
 ENV JBOSS_HOME       /opt/wildfly
-ENV RUNTIME_PACKAGES pwgen
 
 ADD run.sh /
 ADD create_wildfly_admin_user.sh /
 
-RUN apt-get update && apt-get install -y $RUNTIME_PACKAGES --no-install-recommends && apt-get clean -qq && \
-    curl -Ls "https://download.jboss.org/wildfly/$WILDFLY_VERSION/wildfly-$WILDFLY_VERSION.tar.gz" \
-    | tar -xzC /opt --no-same-owner && \
-    rm -rf /var/lib/apt/lists/* && \
-    ln -s /opt/wildfly-$WILDFLY_VERSION $JBOSS_HOME && \
-    groupadd -r wildfly -g 433 && \
-    useradd -u 431 -r -g wildfly -d $JBOSS_HOME -s /bin/false -c "WildFly user" wildfly && \
-    chown wildfly:wildfly $JAVA_HOME/lib/security/cacerts && \
-    chmod +x /create_wildfly_admin_user.sh /run.sh && \
-    chown -R wildfly:wildfly /opt/wildfly*
+# Add the WildFly distribution to /opt, and make wildfly the owner of the extracted tar content
+# Make sure the distribution is available from a well-known place
+RUN cd $HOME \
+    && curl -LOs https://github.com/wildfly/wildfly/releases/download/$WILDFLY_VERSION/wildfly-$WILDFLY_VERSION.tar.gz \
+    && sha1sum wildfly-$WILDFLY_VERSION.tar.gz | grep $WILDFLY_SHA1 \
+    && tar xf wildfly-$WILDFLY_VERSION.tar.gz \
+    && mv $HOME/wildfly-$WILDFLY_VERSION $JBOSS_HOME \
+    && rm wildfly-$WILDFLY_VERSION.tar.gz \
+    && mkdir $JBOSS_HOME/standalone/data \
+    && mkdir $JBOSS_HOME/standalone/log \
+    && groupadd -r wildfly -g 433 \
+    && useradd -u 431 -r -g wildfly -d $JBOSS_HOME -s /bin/false -c "WildFly user" wildfly \
+    && chown wildfly:wildfly $JAVA_HOME/lib/security/cacerts \
+    && chmod +x /create_wildfly_admin_user.sh /run.sh \
+    && chown -R wildfly:wildfly $JBOSS_HOME/
 
-EXPOSE 8080 9990 8443 9993
+# Ensure signals are forwarded to the JVM process correctly for graceful shutdown
+ENV LAUNCH_JBOSS_IN_BACKGROUND true
+
+EXPOSE 8080 9990 8443 9993 5005
 
 USER wildfly
+
+VOLUME $JBOSS_HOME/standalone/configuration
+VOLUME $JBOSS_HOME/standalone/data
+VOLUME $JBOSS_HOME/standalone/tmp
+VOLUME $JBOSS_HOME/standalone/log
+
+RUN ls -Ralph $JBOSS_HOME/standalone
 
 CMD ["/run.sh"]
