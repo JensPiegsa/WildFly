@@ -1,4 +1,4 @@
-WildFly 26.0.1.Final on OpenJDK 17
+WildFly 27.0.0.Final on OpenJDK 17
 ==================================
 
 This is a Docker image for the Java application server [WildFly](http://wildfly.org/). The image is based on Debian and comes with OpenJDK 17. The Dockerfile has been inspired by [this image](https://registry.hub.docker.com/u/sillenttroll/wildfly-java-8/).
@@ -6,8 +6,9 @@ This is a Docker image for the Java application server [WildFly](http://wildfly.
 Tags
 ----
 
-* `26.0.1.Final` ([Dockerfile](https://github.com/JensPiegsa/WildFly/blob/26.0.1.Final/Dockerfile)), `latest-final`, `latest`
-* `20.0.1.Final` ([Dockerfile](https://github.com/JensPiegsa/WildFly/blob/20.0.1.Final/Dockerfile)),
+* `27.0.0.Final` ([Dockerfile](https://github.com/JensPiegsa/WildFly/blob/27.0.0.Final/Dockerfile)), `latest-final`, `latest`
+* `26.0.1.Final` ([Dockerfile](https://github.com/JensPiegsa/WildFly/blob/26.0.1.Final/Dockerfile))
+* `20.0.1.Final` ([Dockerfile](https://github.com/JensPiegsa/WildFly/blob/20.0.1.Final/Dockerfile))
 * `15.0.0.Final` ([Dockerfile](https://github.com/JensPiegsa/WildFly/blob/15.0.0.Final/Dockerfile))
 * `14.0.1.Final` ([Dockerfile](https://github.com/JensPiegsa/WildFly/blob/14.0.1.Final/Dockerfile))
 * `14.0.0.Final` ([Dockerfile](https://github.com/JensPiegsa/WildFly/blob/14.0.0.Final/Dockerfile))
@@ -74,4 +75,4 @@ Administration
 Contribute
 ----------
 
-The source is available on [Github](https://github.com/JensPiegsa/WildFly/). Please [report any issues](https://github.com/JensPiegsa/WildFly/issues).
+The source is available on [GitHub](https://github.com/JensPiegsa/WildFly/). Please [report any issues](https://github.com/JensPiegsa/WildFly/issues).

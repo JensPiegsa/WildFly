@@ -2,7 +2,7 @@ FROM openjdk:17
 
 MAINTAINER Jens Piegsa <piegsa@gmail.com>
 
-ENV WILDFLY_VERSION  26.0.1.Final
+ENV WILDFLY_VERSION  27.0.0.Final
 ENV WILDFLY_SHA1     08908faf9ae99e5fb6374979afbffea461aadc2c
 ENV JBOSS_HOME       /opt/wildfly
 
