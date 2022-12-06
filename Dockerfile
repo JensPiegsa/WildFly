@@ -3,7 +3,7 @@ FROM openjdk:17
 MAINTAINER Jens Piegsa <piegsa@gmail.com>
 
 ENV WILDFLY_VERSION  27.0.0.Final
-ENV WILDFLY_SHA1     08908faf9ae99e5fb6374979afbffea461aadc2c
+ENV WILDFLY_SHA1     31106643002ae570444b4e30e376e27fff23cc2f
 ENV JBOSS_HOME       /opt/wildfly
 
 ADD run.sh /
